@@ -1,4 +1,5 @@
 import { FieldErrors, FieldValues, useFormContext } from "react-hook-form";
+import { StyledErrorMessage } from "./styles";
 
 interface ErrorMessageProps {
     field: string
@@ -14,7 +15,7 @@ export function ErrorMessage({ field } : ErrorMessageProps){
 
     return (
         fieldError ? 
-            <span className="text-xs text-red-500 mt-1">{fieldError.toString()}</span> 
+            <StyledErrorMessage>{fieldError.toString()}</StyledErrorMessage>
         : 
             null
     );

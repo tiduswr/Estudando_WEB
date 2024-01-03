@@ -1,10 +1,10 @@
 import { HTMLAttributes } from "react";
+import { StyledGridField } from "./styles";
 
 export function GridField(props: HTMLAttributes<HTMLDivElement>){
 
-    const { className, ...rest } = props;
-
     return (
-        <div className={`grid gap-2 grid-cols-10 ${className || ''}`} {...rest} />
+        <StyledGridField {...props}/>
     )
+    
 }
